@@ -1,0 +1,377 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, 
+*::before, 
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #353A5A;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  color: #353A5A;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 650px;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 39px;
+}
+
+.nav-item {
+  list-style-type: none;
+}
+
+.h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.light {
+  color: #FDFDFD;
+}
+
+.bg-colored {
+  background-color: #10B582;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  padding-bottom: 8px;
+  border-bottom: 2px dashed #FA9F42;
+}
+
+.header {
+  padding: 40px 0;
+}
+
+.offer {
+  display: grid;
+  grid-template-rows: 130px 316px 135px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: 
+  "sm text img2"
+  "img1 text img2"
+  "img1 text link";
+  /* почему не работают эті свойства */
+  justify-content: space-between;
+  align-content: space-between;
+  height: 696px;
+  padding: 16px 0 120px;
+}
+
+.offer-icons {
+  display: grid;
+  grid-area: sm;
+  grid-template: repeat(3, 1fr) / 1fr;
+  align-self: start;
+  gap: 30px;
+}
+
+.image1 {
+  grid-area: img1;
+  align-self: end;
+}
+
+.image2 {
+  grid-area: img2;
+  justify-self: end;
+}
+
+.offer-text {
+  display: grid;
+  grid-area: text;
+  grid-template-rows: repeat(4, max-content);
+  text-align: center;
+  padding: 92px 0;
+}
+
+.h1 {
+  margin: 0;
+  padding: 40px 0 20px;
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 120%;
+}
+
+.logo {
+  align-self: end;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.orange {
+  background-color: #FA9F42;
+}
+
+.btn {
+  justify-self: center;
+  width: 230px;
+  height: 56px;
+  margin-top: 50px;
+  border-radius: 0 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 30px rgba(125, 152, 140, 0.3);
+}
+
+.link {
+  grid-area: link;
+  align-self: end;
+  justify-self: end;
+  writing-mode: vertical-rl;
+}
+
+.extra {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.down {
+  padding-top: 15px;
+}
+
+.section {
+  margin: 120px 0;
+}
+
+.section:first-child {
+  margin-top: 0;
+}
+
+.col-4 {
+  display: grid;
+  grid-template: max-content / repeat(4, 1fr);
+  gap: 30px;
+}
+
+.number-title,
+.h2 {
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 100%;
+}
+
+.data-item {
+  text-align: center;
+}
+
+.number-title {
+  padding-bottom: 15px;
+  color: #10B582;
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.col-2 {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  grid-template-areas: 
+  "left right";
+  gap: 100px;
+}
+
+.photos {
+  display: grid;
+  grid-area: right;
+  grid-template: 1fr 1fr / repeat( 6, 1fr);
+  grid-template-areas: 
+  "p1 p2 p3"
+  "p4 p5 p6";
+  gap: 30px; 
+}
+
+.p {
+  padding-top: 15px;
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+.p3 {
+  grid-area: p3;
+}
+
+.p4 {
+  grid-area: p4;
+}
+
+.p5 {
+  grid-area: p5;
+}
+
+.p6 {
+  grid-area: p6;
+}
+
+.align-left {
+  grid-area: left;
+  align-self: center;
+  width: 500px;
+}
+
+.col-2-left {
+  grid-area: left;
+  align-self: center;
+  justify-self: start;
+}
+
+.col-2-right {
+  grid-area: right;
+  width: 570px;
+  padding: 120px 0;
+}
+
+.space-text {
+  padding-top: 20px;
+}
+
+.diagram-item {
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(125, 152, 140, 0.12);
+  cursor: pointer;
+}
+
+.diagram-item:hover {
+  box-shadow: 0px 0px 15px rgba(125, 152, 140, 0.4);
+}
+
+.space-img {
+  padding-bottom: 15px;
+}
+
+.align-center {
+  display: grid;
+  text-align: center;
+}
+
+.price {
+  background: url('../assets/bg/bg.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.footer-row1,
+.footer-row2 {
+  border-top: 1px solid #353A5A10;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template: max-content / 370px repeat(4, 200px);
+  grid-template-areas: 
+  "info learn about contacts email";
+  justify-content: start;
+  padding: 80px 0 50px;
+}
+
+.info {
+  grid-area: info;
+  margin-right: 100px;
+}
+
+.learn {
+  grid-area: learn;
+}
+
+.about {
+  grid-area: about;
+}
+
+.contacts {
+  grid-area: contacts;
+}
+
+.email {
+  grid-area: email;
+}
+
+.tint {
+  padding-right: 25px;
+  filter: invert(15%) sepia(19%) saturate(21%) hue-rotate(186deg) brightness(76%) contrast(30%);
+}
+
+.space-logo {
+  padding: 27px 0 47px;
+}
+
+.space-h4 {
+  display: block;
+  padding-bottom: 31px;
+}
+
+.footer-item {
+  display: block;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.footer-item:hover, 
+.extra-info .extra:hover {
+  color: #FA9F42;
+}
+
+.email .footer-item:hover,
+.extra-info .extra:hover:first-child {
+  color: #353A5A;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.footer-row2 {
+  padding: 30px 0;
+}
+
+.space-extra {
+  padding-left: 30px;
+}
+
+.extra-info {
+  display: grid;
+  grid-template-columns:  1fr max-content max-content;
+}
